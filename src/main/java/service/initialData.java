@@ -1,6 +1,7 @@
 package service;
 
 import dao.CarDAO;
+import model.ArticleRepository;
 import model.Brand;
 import model.Car;
 import model.Color;
@@ -22,6 +23,9 @@ public class initialData {
 
     @Inject
     CarDAO carDAO;
+
+    @Inject
+    ArticleRepository articleRepository;
 
     @PersistenceContext
     EntityManager em;
@@ -45,7 +49,6 @@ public class initialData {
         brandsList.add("Volkswagen");
         brandsList.add("Ford");
         for (int i = 0; i < 5; i++) {
-            //Car car = new Car(getRandomId(), getRandomBrand(), getRandomYear(), getRandomColor(), getRandomPrice(), getRandomSoldState());
             Car car = new Car(getRandomId(), "BMW", 2020, "Blue", 1, true);
             System.out.println("::::::::::::::Trying to Persist" + car.id);
             em.persist(car);
