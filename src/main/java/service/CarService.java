@@ -36,7 +36,7 @@ public class CarService {
     }
 
     public List<Car> getAllCars() {
-        return carDAO.getAllCars();
+        return carDAO.getAllCarss();
     }
 
    public List<String> getColorsdb(){

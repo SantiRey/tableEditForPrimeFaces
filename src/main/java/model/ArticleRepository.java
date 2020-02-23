@@ -15,16 +15,16 @@
  * KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations
  * under the License.
-
+ */
 
 package model;
 
 import org.apache.deltaspike.data.api.EntityRepository;
 import org.apache.deltaspike.data.api.Repository;
 
+
 @Repository
 public interface ArticleRepository extends EntityRepository<Car, Long>
 {
 
 }
-*/
