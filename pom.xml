@@ -53,17 +53,38 @@
             <version>1.18.10</version>
             <scope>provided</scope>
         </dependency>
-
-
-        <!-- https://mvnrepository.com/artifact/org.apache.geronimo.specs/geronimo-atinject_1.0_spec -->
+        <!-- https://mvnrepository.com/artifact/org.apache.deltaspike.core/deltaspike-core-api -->
         <dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-atinject_1.0_spec</artifactId>
-            <version>1.0</version>
-            <scope>provided</scope>
+            <groupId>org.apache.deltaspike.core</groupId>
+            <artifactId>deltaspike-core-api</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.deltaspike.core/deltaspike-core-impl -->
+        <dependency>
+            <groupId>org.apache.deltaspike.core</groupId>
+            <artifactId>deltaspike-core-impl</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.deltaspike.modules/deltaspike-data-module-impl -->
+        <dependency>
+            <groupId>org.apache.deltaspike.modules</groupId>
+            <artifactId>deltaspike-data-module-impl</artifactId>
+            <version>1.9.3</version>
+            <scope>runtime</scope>
         </dependency>
 
-
+        <!-- https://mvnrepository.com/artifact/org.apache.deltaspike.modules/deltaspike-data-module-api -->
+        <dependency>
+            <groupId>org.apache.deltaspike.modules</groupId>
+            <artifactId>deltaspike-data-module-api</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.deltaspike.modules/deltaspike-data-module-api -->
+        <dependency>
+            <groupId>org.apache.deltaspike.modules</groupId>
+            <artifactId>deltaspike-data-module-api</artifactId>
+            <version>1.9.3</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -77,13 +98,7 @@
                     <target>12</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.22.2</version>
-                <configuration>
-                    <argLine>--enable-preview</argLine>
-                </configuration>
-            </plugin>
+
         </plugins>
 
         <finalName>Example</finalName>

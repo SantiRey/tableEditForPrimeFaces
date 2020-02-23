@@ -14,11 +14,11 @@ public class ColorDAO {
         em.persist(color);
     }
 
-    public void update(Color Color){
-        em.merge(Color);
+    public void update(Color color){
+        em.merge(color);
     }
+
     public List<Color> getAllColors(){
         return em.createQuery("SELECT b FROM Color b").getResultList();
     }
-
 }

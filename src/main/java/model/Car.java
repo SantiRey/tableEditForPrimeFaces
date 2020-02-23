@@ -4,11 +4,12 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.List;
 
 @Data
 @Entity
-public class Car {
+public class Car implements Serializable {
 
 @Id
 public String id;

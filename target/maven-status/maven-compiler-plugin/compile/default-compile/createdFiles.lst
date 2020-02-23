@@ -1,5 +1,9 @@
 model/Car.class
+dao/ColorDAO.class
+model/Brand.class
 beans/EditView.class
+dao/BrandDAO.class
 service/initialData.class
 service/CarService.class
+model/Color.class
 dao/CarDAO.class

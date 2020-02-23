@@ -40,19 +40,14 @@ public class EditView implements Serializable {
         return cars2;
     }
 
-
     public List<String> getBrands() {
         List<String> brands= service.getBrandsdb();
         return brands;
     }
 
     public List<String> getColors() {
-        List<String> colors= service.getColors();
+        List<String> colors= service.getColorsdb();
         return colors;
-    }
-
-    public void setService(CarService service) {
-        this.service = service;
     }
 
     public void onRowEdit(RowEditEvent event) {
