@@ -1,5 +1,6 @@
 package beans;
 
+import lombok.Data;
 import model.Car;
 import org.primefaces.event.CellEditEvent;
 import org.primefaces.event.RowEditEvent;
@@ -17,11 +18,14 @@ import java.util.List;
 
 @Named("dtEditView")
 @ViewScoped
+@Data
 @Transactional
 public class EditView implements Serializable {
 
     private List<Car> cars1;
     private List<Car> cars2;
+
+    private String text;
 
     @Inject
     private CarService service;
@@ -30,8 +34,13 @@ public class EditView implements Serializable {
     public void init() {
         cars1 = service.getAllCars();
         cars2 = service.getAllCars();
+
     }
 
+    public void exampleButton(){
+        text="You have druck a Bottom :D";
+        //return "index?faces-redirect=true";
+    }
     public List<Car> getCars1() {
         return cars1;
     }
